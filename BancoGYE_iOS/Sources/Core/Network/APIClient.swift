@@ -36,7 +36,7 @@ final class APIClient {
     private let session: URLSession
 
     private init() {
-        baseURL = URL(string: "http://192.168.1.7:8080/api")!
+        baseURL = URL(string: "http://localhost:8080/api")!
         decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         let isoFormatter = ISO8601DateFormatter()
