@@ -15,8 +15,11 @@ dotnet restore
 dotnet run
 ```
 
-API disponible en `http://localhost:5000`  
-Swagger UI en `http://localhost:5000` (root)
+API disponible en `http://localhost:8080`  
+Swagger UI en `http://localhost:8080` (root)
+
+> Perfil alternativo HTTPS: `https://localhost:7298` / `http://localhost:5220`  
+> Para usar perfil HTTPS: `dotnet run --launch-profile https`
 
 ### Endpoints
 
