@@ -1,0 +1,60 @@
+name: BancoGYE
+options:
+  bundleIdPrefix: com.prueba
+  deploymentTarget:
+    iOS: "17.0"
+  xcodeVersion: "16"
+  generateEmptyDirectories: true
+
+targets:
+  BancoGYE:
+    type: application
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - path: Sources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.prueba.bancogye
+        SWIFT_VERSION: 5.9
+        INFOPLIST_FILE: Sources/App/Info.plist
+        ENABLE_HARDENED_RUNTIME: YES
+    info:
+      path: Sources/App/Info.plist
+      properties:
+        NSFaceIDUsageDescription: "Necesitamos verificar tu identidad para acceder a tus movimientos."
+        UILaunchStoryboardName: ""
+        CFBundleDisplayName: "Banco GYE"
+
+  BancoGYETests:
+    type: bundle.unit-test
+    platform: iOS
+    deploymentTarget: "17.0"
+    sources:
+      - path: Tests
+    dependencies:
+      - target: BancoGYE
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.prueba.bancogye.tests
+        SWIFT_VERSION: 5.9
+        GENERATE_INFOPLIST_FILE: YES
+
+schemes:
+  BancoGYE:
+    build:
+      targets:
+        BancoGYE: all
+        BancoGYETests: testing
+    run:
+      config: Debug
+    test:
+      config: Debug
+      targets:
+        - BancoGYETests
+    profile:
+      config: Release
+    analyze:
+      config: Debug
+    archive:
+      config: Release

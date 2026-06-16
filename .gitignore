@@ -1,0 +1,15 @@
+# iOS
+BancoGYE_iOS/*.xcodeproj/xcuserdata/
+BancoGYE_iOS/*.xcworkspace/xcuserdata/
+BancoGYE_iOS/DerivedData/
+BancoGYE_iOS/.build/
+
+# .NET
+BancoGYE_API/bin/
+BancoGYE_API/obj/
+BancoGYE_API/*.user
+BancoGYE_API.Tests/bin/
+BancoGYE_API.Tests/obj/
+
+# macOS
+.DS_Store
