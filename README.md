@@ -54,7 +54,7 @@ dotnet test
 # O desde CLI:
 xcodebuild test -project BancoGYE_iOS/BancoGYE.xcodeproj \
   -scheme BancoGYE \
-  -destination 'platform=iOS Simulator,name=iPhone 15 Pro'
+  -destination 'platform=iOS Simulator,name=iPhone 17 Pro'
 ```
 
 34 tests — organizados en 4 suites:
