@@ -131,8 +131,11 @@ BancoGYE_API/
 
 ### Biometría
 `LocalAuthentication.LAContext` con `deviceOwnerAuthenticationWithBiometrics`.  
-Maneja: éxito, cancelación, fallo, dispositivo sin biometría.  
-No se implementó fallback a passcode (fuera del alcance).
+Maneja: éxito, cancelación, fallo, dispositivo sin biometría.
+
+Fallback a passcode implementado en dos casos:
+- Usuario toca "Ingresar contraseña" en el diálogo de Face ID (`LAError.userFallback`) → se abre pantalla de passcode del sistema vía `.deviceOwnerAuthentication`
+- Face ID bloqueado por intentos fallidos (`LAError.biometryLockout`) → fallback automático a passcode
 
 ### Paginación
 - iOS carga página inicial (20 items, últimos 30 días).

@@ -15,6 +15,7 @@ final class BiometricViewModel: ObservableObject {
 
     init(service: BiometricServiceProtocol = BiometricService()) {
         self.service = service
+        Task { await self.authenticate() }
     }
 
     func authenticate() async {
@@ -27,7 +28,7 @@ final class BiometricViewModel: ObservableObject {
             case .cancelled:
                 state = .idle
             default:
-                state = .failed(error.localizedDescription ?? "Error desconocido")
+                state = .failed(error.localizedDescription)
             }
         } catch {
             state = .failed(error.localizedDescription)

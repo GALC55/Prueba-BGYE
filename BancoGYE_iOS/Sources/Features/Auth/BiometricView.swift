@@ -52,7 +52,6 @@ struct BiometricView: View {
             Spacer()
         }
         .padding()
-        .task { await viewModel.authenticate() }
     }
 
     private var biometricIcon: String {
