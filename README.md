@@ -162,6 +162,13 @@ Debounce de 400ms en búsqueda para evitar requests innecesarios.
 
 ---
 
+## Evidencia Gráfica
+
+Video demo de la app (flujo completo: biometría, movimientos, archivado):  
+[Ver evidencia en Google Drive](https://drive.google.com/file/d/1o5jsLkOLkWuRwV3XoDL2kq_p8vrknCe9/view?usp=sharing)
+
+---
+
 ## Librerías utilizadas
 
 | Lib | Uso |
