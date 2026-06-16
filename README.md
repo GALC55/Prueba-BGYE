@@ -45,6 +45,29 @@ dotnet test
 
 ---
 
+## Tests iOS
+
+**Requisito:** Xcode 16+ con esquema `BancoGYETests`
+
+```bash
+# Desde Xcode: Cmd+U
+# O desde CLI:
+xcodebuild test -project BancoGYE_iOS/BancoGYE.xcodeproj \
+  -scheme BancoGYE \
+  -destination 'platform=iOS Simulator,name=iPhone 15 Pro'
+```
+
+34 tests — organizados en 4 suites:
+
+| Suite | Tests | Cubre |
+|-------|-------|-------|
+| `BiometricViewModelTests` | 7 | Estados de autenticación (éxito, fallo, cancelación, sin biometría, retry) |
+| `MovementsViewModelTests` | 12 | Carga inicial, paginación, refresh, búsqueda, filtros, agrupación por fecha |
+| `ArchivedMovementStoreTests` | 7 | Persistencia Core Data (archivar, desarchivar, duplicados, integridad de datos) |
+| `DateGroupTests` | 8 | Lógica de agrupación temporal (hoy, esta semana, últimos 15/30 días, más antiguo) |
+
+---
+
 ## Ejecutar la App iOS
 
 **Requisito:** Xcode 16+, iOS 17+ (simulador o dispositivo)
